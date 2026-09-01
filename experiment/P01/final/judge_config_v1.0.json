@@ -1,0 +1,38 @@
+{
+  "config_id": "P01_FINAL_JUDGES_V1.0",
+  "rubric_version": "P01_FINAL_JUDGE_RUBRIC_V1.0",
+  "status": "CONFIGURED_NO_PAID_CALIBRATION_RUNS",
+  "judges": [
+    { "judge": "judgeA", "provider": "OpenAI", "model_id": "gpt-5.6-terra", "reasoning_effort": "high", "tools": false, "browsing": false, "retrieval": false, "temperature": null },
+    { "judge": "judgeB", "provider": "OpenAI", "model_id": "gpt-5.4-mini-2026-03-17", "reasoning_effort": "high", "tools": false, "browsing": false, "retrieval": false, "temperature": null }
+  ],
+  "criteria": {
+    "S1": { "name": "Evidence-Use Coherence", "labels": ["COHERENT", "PARTIALLY_COHERENT", "INCOHERENT"], "rubric": "Assess whether important claims about supplied evidence are accurate, relevant, and clearly distinguished from assumptions." },
+    "S2": { "name": "Pathway Coherence", "labels": ["COHERENT", "PARTIALLY_COHERENT", "INCOHERENT"], "rubric": "Assess whether stated pathways logically connect supplied evidence to the operational event within the horizon without contradiction." },
+    "S3": { "name": "Unsupported Substantive Inference", "labels": ["NONE", "MINOR", "MATERIAL"], "rubric": "Assess whether substantive factual or causal claims absent from the closed packet are presented as established rather than marked inference." },
+    "S4": { "name": "Evidence–Assessment Coherence", "labels": ["COHERENT", "PARTIALLY_COHERENT", "INCOHERENT"], "rubric": "Assess whether the numerical risk estimate coheres with the model's own evidence and pathway interpretation. This supports but does not equal F5." }
+  },
+  "blinding": {
+    "allowed": ["visible_case", "candidate_output", "sanitized_baseline_risk_when_needed_for_S4"],
+    "forbidden": ["target_model", "provider", "condition_code", "expected_direction", "expected_ordering", "performance_hypothesis", "other_target_outputs"]
+  },
+  "local_output": {
+    "structured_fields": ["judge_item_id", "judge_config_id", "rubric_version", "criteria.S1", "criteria.S2", "criteria.S3", "criteria.S4"],
+    "langfuse_scores_per_judge": 4,
+    "immutable_local_envelope": "P01_JUDGE_SCORE_ENVELOPE_V2"
+  },
+  "langfuse": {
+    "evaluator_names": { "judgeA": "P01_FINAL_JUDGE_A_S1_S4_V1", "judgeB": "P01_FINAL_JUDGE_B_S1_S4_V1" },
+    "rule_names": { "judgeA": "P01_FINAL_ONLY_JUDGE_A_DISABLED_V1", "judgeB": "P01_FINAL_ONLY_JUDGE_B_DISABLED_V1" },
+    "native_output_encoding": "MULTI_SELECT_ONE_CRITERION_LABEL_PER_S1_S4",
+    "rules_initially_enabled": false,
+    "observation_filters": [
+      { "type": "stringOptions", "column": "type", "operator": "any of", "value": ["GENERATION"] },
+      { "type": "stringOptions", "column": "name", "operator": "any of", "value": ["target-model-generation"] },
+      { "type": "stringObject", "column": "metadata", "key": "experiment_phase", "operator": "=", "value": "P01_FINAL" },
+      { "type": "stringObject", "column": "metadata", "key": "protocol_version", "operator": "=", "value": "P01_FINAL_PROTOCOL_V1.0" },
+      { "type": "stringObject", "column": "metadata", "key": "p01_final_rule_scope", "operator": "=", "value": "P01_FINAL_ONLY" }
+    ],
+    "production_lineage_note": "The external two-call judge pipeline remains authoritative for four criterion-specific scores per judge; native Langfuse evaluator/rule resources are disabled until integrated calibration and smoke."
+  }
+}

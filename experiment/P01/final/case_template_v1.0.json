@@ -1,0 +1,44 @@
+{
+  "schema_id": "P01_FINAL_CASE_TEMPLATE",
+  "schema_version": "1.0",
+  "status": "TEMPLATE_ONLY_NO_CONCRETE_CASES",
+  "model_visible": {
+    "title": "",
+    "assessment_time": "",
+    "evidence_cutoff": "",
+    "forecast_horizon": { "start": "", "end": "", "visible_interval": "" },
+    "event": { "event_id": "", "operational_definition": "", "intent_rule": "", "timing_rule": "", "exclusions": [] },
+    "actors": [],
+    "closed_evidence_packet": [],
+    "visible_treatment_addition": null,
+    "authority_statement": null,
+    "task_prompt_id": "P01_FINAL_TARGET_PROMPT",
+    "task_prompt_version": "1.0"
+  },
+  "researcher_hidden": {
+    "case_id": "",
+    "case_version": "",
+    "coverage_family": "",
+    "case_role": "CORE_OR_STRESS",
+    "condition_identity": "BL_OR_WD_OR_SD_OR_ND_OR_BL_AUTH_OR_SD_AUTH",
+    "expected_direction": null,
+    "expected_ordering": null,
+    "primary_manipulated_evidence_property": "",
+    "diagnosticity_rationale": "",
+    "source_dependence_structure": [],
+    "reliability_provenance_rationale": "",
+    "recency_relevance": "",
+    "contradiction_structure": [],
+    "pathway_map": [],
+    "salience_rationale": "",
+    "authority_metadata": null,
+    "deterministic_scoring_applicability": {},
+    "judge_reference_material": {},
+    "known_confounds": []
+  },
+  "renderer_contract": {
+    "allow_root": "model_visible",
+    "deny_root": "researcher_hidden",
+    "whole_record_serialization_forbidden": true
+  }
+}

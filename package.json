@@ -1,0 +1,39 @@
+{
+  "name": "national-security-evals",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pre-smoke P01 execution harness for the Strategic AI Evaluation Alpha",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "dry-render:p01": "tsc && node dist/mastra/runners/dry_render_p01.js",
+    "smoke:p01": "tsc && node dist/mastra/runners/smoke_p01.js",
+    "smoke:kimi27c:p01": "tsc && node dist/mastra/runners/smoke_kimi27c_p01.js",
+    "validate:smoke-patch:p01": "tsc && node dist/mastra/runners/validate_smoke_patch_p01.js",
+    "validate:block-a:p01": "tsc && node dist/mastra/runners/validate_block_a_p01.js",
+    "validate:block-b:p01": "tsc && node dist/mastra/runners/validate_block_b_p01.js",
+    "mini-pilot:p01": "tsc && node dist/mastra/runners/mini_pilot_p01.js",
+    "run:p01": "tsc && node dist/mastra/runners/run_p01.js",
+    "smoke:p01:final": "tsc && node dist/mastra/runners/smoke_p01_final.js",
+    "run:p01:final": "tsc && node dist/mastra/runners/run_p01_final.js",
+    "reprocess:smoke:p01:final:patch1": "tsc && node dist/mastra/runners/reprocess_smoke_patch1_p01_final.js",
+    "validate:parser:p01": "tsc && node dist/mastra/runners/validate_parser_regression_p01.js",
+    "reprocess:smoke002:p01:final": "tsc && node dist/mastra/runners/reprocess_smoke_002_p01_final.js"
+  },
+  "dependencies": {
+    "@langfuse/otel": "latest",
+    "@langfuse/tracing": "latest",
+    "@opentelemetry/sdk-node": "latest",
+    "csv-parse": "latest",
+    "dotenv": "latest",
+    "openai": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,18 @@
+{
+  "config_id": "P01_FINAL_RUN_CONFIG_SCHEMA_V1.0",
+  "status": "ARCHITECTURE_ONLY_NOT_FINAL_RUN_MATRIX",
+  "experiment_phase": "P01_FINAL",
+  "protocol_version": "P01_FINAL_PROTOCOL_V1.0",
+  "target_models": [
+    { "provider": "OpenAI", "model_id": "gpt-5.6-sol", "role": "target" },
+    { "provider": "OpenAI", "model_id": "gpt-4.1-2025-04-14", "role": "target" },
+    { "provider": "Moonshot AI", "model_id": "kimi-k3", "role": "target" }
+  ],
+  "conditions_default": ["BL", "WD", "SD", "ND"],
+  "primary_repetitions": ["R01", "R02", "R03"],
+  "reliability_sentinels": { "count": 2, "repetitions": 5, "identities": "FREEZE_AFTER_BLOCK_C", "extra_generations": 12 },
+  "authority": { "future_case_count": 2, "conditions": ["BL_AUTH", "SD_AUTH"], "matched_against": ["BL", "SD"], "adds_substantive_evidence": false },
+  "portfolio": { "case_count": 10, "core": 6, "stress": 4 },
+  "reference_geometry": { "base": 360, "authority": 36, "sentinels": 12, "target_total": 408, "maximum_judge_executions": 816 },
+  "required_trace_scope": { "observation_name": "target-model-generation", "metadata": { "experiment_phase": "P01_FINAL", "protocol_version": "P01_FINAL_PROTOCOL_V1.0", "p01_final_rule_scope": "P01_FINAL_ONLY" } }
+}
