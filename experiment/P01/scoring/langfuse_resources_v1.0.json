@@ -1,0 +1,42 @@
+{
+  "receipt_version": "1.0",
+  "project_id": "cmtgcfj9l1kq6ad0jnl06ca6u",
+  "created_at": "2026-09-01",
+  "api_surface": "/api/public/v2/evaluators + /api/public/v2/evaluation-rules",
+  "paid_calls_executed": 0,
+  "evaluators": [
+    { "judge": "judgeA", "id": "cmtia7cvq0fiyad0fm07q1zjp", "name": "P01_FINAL_JUDGE_A_S1_S4_V1", "version": 1, "model_id": "gpt-5.6-terra", "status": "active", "output": "categorical_multi_select_S1_S4" },
+    { "judge": "judgeB", "id": "cmtia7d380e7zad0jv70szpd0", "name": "P01_FINAL_JUDGE_B_S1_S4_V1", "version": 1, "model_id": "gpt-5.4-mini-2026-03-17", "status": "active", "output": "categorical_multi_select_S1_S4" }
+  ],
+  "rules": [
+    {
+      "judge": "judgeA",
+      "id": "cmtia7daq0fj3ad0f2n6nbw0w",
+      "name": "P01_FINAL_ONLY_JUDGE_A_DISABLED_V1",
+      "enabled": false,
+      "sampling": 1,
+      "filters": [
+        { "type": "stringOptions", "column": "type", "operator": "any of", "value": ["GENERATION"] },
+        { "type": "stringOptions", "column": "name", "operator": "any of", "value": ["target-model-generation"] },
+        { "type": "stringObject", "column": "metadata", "key": "experiment_phase", "operator": "=", "value": "P01_FINAL" },
+        { "type": "stringObject", "column": "metadata", "key": "protocol_version", "operator": "=", "value": "P01_FINAL_PROTOCOL_V1.0" },
+        { "type": "stringObject", "column": "metadata", "key": "p01_final_rule_scope", "operator": "=", "value": "P01_FINAL_ONLY" }
+      ]
+    },
+    {
+      "judge": "judgeB",
+      "id": "cmtia7dhs0fj8ad0fidflmi4s",
+      "name": "P01_FINAL_ONLY_JUDGE_B_DISABLED_V1",
+      "enabled": false,
+      "sampling": 1,
+      "filters": [
+        { "type": "stringOptions", "column": "type", "operator": "any of", "value": ["GENERATION"] },
+        { "type": "stringOptions", "column": "name", "operator": "any of", "value": ["target-model-generation"] },
+        { "type": "stringObject", "column": "metadata", "key": "experiment_phase", "operator": "=", "value": "P01_FINAL" },
+        { "type": "stringObject", "column": "metadata", "key": "protocol_version", "operator": "=", "value": "P01_FINAL_PROTOCOL_V1.0" },
+        { "type": "stringObject", "column": "metadata", "key": "p01_final_rule_scope", "operator": "=", "value": "P01_FINAL_ONLY" }
+      ]
+    }
+  ],
+  "safety": { "rules_disabled": true, "historical_backfill": false, "historical_alpha_match_possible": false }
+}

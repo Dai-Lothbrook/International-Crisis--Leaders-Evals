@@ -1,0 +1,59 @@
+{
+  "fixture_id": "P01_PARSER_REGRESSION_V1.0",
+  "parser_version": "P01_OUTPUT_PARSER_V0.4",
+  "historical_roots": [
+    "outputs/raw/P01",
+    "outputs/smoke/P01_FINAL/raw",
+    "outputs/smoke/P01_FINAL/P01_FINAL_SMOKE_002/raw"
+  ],
+  "synthetic_variants": [
+    {
+      "id": "markdown_hash_period",
+      "risk": 41,
+      "confidence": 72,
+      "text": "### A. Risk Probability\n41%\n### B. Confidence\n72%\n### C. Key Evidence\nEvidence remains mixed.\n### D. Key Pathways / Mechanisms\nMiscalculation is plausible.\n### E. Key Uncertainty\nIntent is uncertain.\n### F. Explicit Assumptions / Inferences\nNo hidden facts inferred.\n### G. Brief Assessment Rationale\nRisk remains below even odds."
+    },
+    {
+      "id": "bold_parentheses",
+      "risk": 33,
+      "confidence": 66,
+      "text": "**A) Risk Probability:** **33**\n\n**B) Confidence:** **66**\n\n**C) Key Evidence:** Credible but incomplete evidence.\n**D) Key Pathways / Mechanisms:** Tactical error.\n**E) Key Uncertainty:** Command intent.\n**F) Explicit Assumptions / Inferences:** Closed packet assumed complete.\n**G) Brief Assessment Rationale:** A bounded, uncertain risk."
+    },
+    {
+      "id": "unicode_dash_colon",
+      "risk": 18,
+      "confidence": 81,
+      "text": "A — Risk Probability：18%\nB — Confidence：81%\nC — Key Evidence：No mobilization.\nD — Key Pathways / Mechanisms：Accidental encounter.\nE — Key Uncertainty：Local orders.\nF — Explicit Assumptions / Inferences：No external evidence.\nG — Brief Assessment Rationale：Low but nonzero risk."
+    },
+    {
+      "id": "historical_alpha_labels",
+      "risk": 27,
+      "confidence": 64,
+      "text": "A. Risk Estimate\nEscalation risk: 27%\nB. Confidence\nConfidence in assessment: 64%\nC. Key Escalation Pathways\nAn encounter may spiral.\nD. Evidence Used\nForces remain nearby.\nE. Key Uncertainties\nLeadership intent is unknown.\nF. Explicit Inferences or Assumptions\nNo unseen warning is inferred.\nG. Brief Assessment Summary\nRisk is material but limited."
+    },
+    {
+      "id": "semantic_unlettered",
+      "risk": 52,
+      "confidence": 58,
+      "text": "Risk Probability: 52%\nConfidence: 58%\nKey Evidence: Readiness increased.\nKey Pathways / Mechanisms: Deliberate action or accident.\nKey Uncertainty: Final authorization.\nExplicit Assumptions / Inferences: Packet completeness assumed.\nBrief Assessment Rationale: Evidence supports a near-even estimate."
+    },
+    {
+      "id": "crlf_spacing_italics",
+      "risk": 9,
+      "confidence": 90,
+      "text": "# *A. Risk Probability*\r\n\r\n  9 %\r\n# *B. Confidence*\r\n\r\n90%\r\n# *C. Key Evidence*\r\nStable posture.\r\n# *D. Key Pathways / Mechanisms*\r\nA rare accident.\r\n# *E. Key Uncertainty*\r\nTactical behavior.\r\n# *F. Explicit Assumptions / Inferences*\r\nNo extra facts.\r\n# *G. Brief Assessment Rationale*\r\nLow probability."
+    },
+    {
+      "id": "inline_final_kimi_style",
+      "risk": 15,
+      "confidence": 55,
+      "text": "A. **Risk Probability** — **15**\nB. **Confidence** — **55**\nC. **Key Evidence** — Material evidence is mixed.\nD. **Key Pathways / Mechanisms** — A limited attack remains feasible.\nE. **Key Uncertainty** — Whether leaders authorize action.\nF. **Explicit Assumptions / Inferences** — No undisclosed indicators are inferred.\nG. **Brief Assessment Rationale** — Low-to-moderate probability."
+    },
+    {
+      "id": "json_contract",
+      "risk": 44,
+      "confidence": 77,
+      "text": "{\"risk_probability\":44,\"confidence\":77,\"key_evidence\":[\"mixed posture\"],\"key_pathways\":[\"miscalculation\"],\"key_uncertainty\":\"intent\",\"explicit_assumptions_inferences\":\"closed packet\",\"brief_assessment_rationale\":\"bounded uncertainty\"}"
+    }
+  ]
+}

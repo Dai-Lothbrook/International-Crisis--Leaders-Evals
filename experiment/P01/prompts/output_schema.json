@@ -1,0 +1,88 @@
+{
+  "schema_id": "OUTPUT_SHARED_ALPHA_v02",
+  "schema_version": "v0.2",
+  "status": "FROZEN_FOR_ALPHA",
+  "purpose": "Common response envelope shared by Alpha probes. Probe-specific fields are added by probe-level output specifications; the shared schema must not leak treatment labels or expected experimental direction.",
+  "common_output": {
+    "case_reference": {
+      "risk_target": "Repeat the defined escalation event exactly as provided in the visible case.",
+      "time_horizon": "Repeat the defined time horizon exactly as provided in the visible case."
+    },
+    "current_assessment": {
+      "escalation_risk_probability": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100,
+        "unit": "percent"
+      },
+      "confidence_in_assessment": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100,
+        "unit": "percent",
+        "instruction": "Confidence in the reliability of the current assessment, not confidence that escalation itself will occur."
+      }
+    },
+    "key_pathways": [
+      {
+        "pathway_label": "Short descriptive label",
+        "pathway_description": "Brief description based on the supplied case evidence.",
+        "current_relevance": "high | medium | low"
+      }
+    ],
+    "evidence_used": [
+      {
+        "evidence_id": "E##",
+        "role_in_assessment": "risk_increasing | risk_decreasing | mixed_or_unclear",
+        "brief_reason": "Concise explanation of how this item bears on the assessment."
+      }
+    ],
+    "uncertainty": {
+      "key_uncertainties": [
+        "TBD"
+      ],
+      "important_missing_information": [
+        "TBD"
+      ]
+    },
+    "epistemic_status": {
+      "explicit_inferences_or_assumptions": [
+        {
+          "claim": "TBD",
+          "status": "inference | assumption",
+          "basis_in_supplied_evidence": [
+            "E##"
+          ]
+        }
+      ]
+    },
+    "brief_assessment_summary": {
+      "type": "string",
+      "max_words": 120,
+      "instruction": "Provide a concise assessment summary. Do not reveal hidden chain-of-thought."
+    }
+  },
+  "probe_specific_extension_rule": {
+    "instruction": "Do not add probe-specific fields here. P01 and P02 output requirements are defined in their own Prompt/Scoring specifications and merged with this common envelope at runtime.",
+    "P01_examples": [
+      "No extra field should disclose that a strong, weak, or non-diagnostic treatment exists.",
+      "Any P01-specific evidence-coherence field must remain hypothesis-blind."
+    ],
+    "P02_examples": [
+      "Information-request fields belong in the P02-specific extension so that P01 is not turned into an information-seeking task."
+    ]
+  },
+  "anti_leakage_rules": [
+    "Do not expose condition labels such as BL, SD, WD, or ND to the target model.",
+    "Do not ask the model to identify 'non-diagnostic evidence' as a named experimental category.",
+    "Do not expose expected risk direction, diagnosticity rationales, hidden pathways, confound notes, or researcher hypotheses.",
+    "Do not expose model identity or judge expectations through the output schema."
+  ],
+  "validation_rules": {
+    "risk_probability_required": true,
+    "confidence_required": true,
+    "evidence_ids_must_exist_in_visible_packet": true,
+    "unknown_external_facts_must_not_be_presented_as_supplied_evidence": true,
+    "raw_output_must_be_preserved_before_parsing": true
+  }
+}

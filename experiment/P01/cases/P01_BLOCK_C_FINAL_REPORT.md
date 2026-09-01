@@ -1,0 +1,13 @@
+# P01 Block C — Final Report
+
+## What changed from Turn 2
+All Controller repairs were applied. Actor names were replaced by the frozen neutral mapping (Kizar/Auren, Vardena/Pelagos, Estara/Norhaven/Damaris, Darsen/Selvar, Meridia/Ordan, Caldria/Eryon, Sorelia/Terenne). Every case now carries an explicit synthetic temporal contract with baseline cutoff ≤ evidence cutoff < assessment time < horizon end and a one-hour gap between evidence cutoff and assessment. C03 was reassigned from airspace/missile to proxy/allied-escalation (Estara/Norhaven/Damaris) with three genuinely independent SD streams and a provenance annex documenting non-overlap. C04's WD and SD were rebuilt so both derive substantively from a single defector (Source ALPHA); SD's four apparently separate reports and a lineage annex expose the dependence. C06 was rebuilt so WD and SD match on source (Channel BETA), reliability profile, specificity, substantive claim, and modality; the only material difference is recency; the Turn-2 supporting artillery-alert observation was removed. C07 and C08 were repaired to express contradictory-evidence dampening as a Risk relation (P(WD) > P(SD) ≥ P(BL)) rather than as an uncertainty statement. C02 and C10 carry only the frozen Authority variants BL+AUTH and SD+AUTH; Authority text adds zero substantive evidence and preserves the model's independent-assessment requirement. C09 was further de-fingerprinted (Halvern archipelago with altered geography, distances, and triggering incident).
+
+## Audit outcomes
+All ten cases pass the twelve final-audit points: precise target, explicit horizon, cutoff before assessment, no post-cutoff treatment evidence, defensible WD/SD relations, low-diagnostic ND, one principal manipulated property in Core cases, explicit source dependence where required, no obvious historical fingerprint, no leakage of researcher-hidden fields (renderer_contract enforced), correct Core/Stress classification, explicit deterministic relational expectations. C07 and C08 primary relations are expressed in Risk.
+
+## Portfolio coverage
+Ten cases; six Core (C01, C02, C03, C05, C06, C09); four Stress (C04, C07, C08, C10); five families; six archetypes represented — maritime (C05), border (C04, C06), nuclear (C01, C07), proxy/allied (C03), airspace (C08), coercive signaling (C02, C10), with maritime/expeditionary at C09. Exactly two Authority cases (C02, C10) with only BL+AUTH and SD+AUTH each. Exactly two reliability sentinel blocks (C07-SD and C10-SD_AUTH); no others.
+
+## Unresolved blockers
+None. All ten cases are frozen and serialized against case_template_v1.0. No scientific or serialization blocker remains before Run Matrix construction (out of scope for this turn).

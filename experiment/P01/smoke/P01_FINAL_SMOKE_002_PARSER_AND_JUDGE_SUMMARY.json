@@ -1,0 +1,330 @@
+{
+  "parser_version": "P01_OUTPUT_PARSER_V0.4",
+  "smoke_execution_id": "P01_FINAL_SMOKE_002",
+  "generated_at": "2026-09-01T10:58:18.674Z",
+  "target_calls_executed": 0,
+  "judge_calls_planned": 4,
+  "judge_results_recorded": 4,
+  "parser_results": [
+    {
+      "run_id": "P01FS_C01_BL_SOL_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 38,
+      "confidence": 68,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C01_BL_SOL_R01.json"
+    },
+    {
+      "run_id": "P01FS_C01_BL_GPT41_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 25,
+      "confidence": 80,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C01_BL_GPT41_R01.json"
+    },
+    {
+      "run_id": "P01FS_C01_BL_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 30,
+      "confidence": 60,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C01_BL_KIMI3_R01.json"
+    },
+    {
+      "run_id": "P01FS_C02_SD_AUTH_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 10,
+      "confidence": 75,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C02_SD_AUTH_KIMI3_R01.json"
+    },
+    {
+      "run_id": "P01FS_C06_SD_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 15,
+      "confidence": 55,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C06_SD_KIMI3_R01.json"
+    },
+    {
+      "run_id": "P01FS_C07_SD_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 2,
+      "confidence": 83,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C07_SD_KIMI3_R01.json"
+    },
+    {
+      "run_id": "P01FS_C08_SD_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 12,
+      "confidence": 65,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C08_SD_KIMI3_R01.json"
+    },
+    {
+      "run_id": "P01FS_C10_SD_AUTH_KIMI3_R01",
+      "status": "SUCCESS",
+      "parser_path": "PRIMARY_LETTERED",
+      "risk": 85,
+      "confidence": 80,
+      "error": null,
+      "reprocessed_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\reprocessed\\PARSER_V0.4\\P01FS_C10_SD_AUTH_KIMI3_R01.json"
+    }
+  ],
+  "judge_results": [
+    {
+      "target_run_id": "P01FS_C01_BL_SOL_R01",
+      "judge": "judgeA",
+      "model": "gpt-5.6-terra",
+      "criteria": {
+        "S1": {
+          "label": "COHERENT",
+          "rationale": "The response accurately identifies the confirmed missile deployment, declaratory policy, failed negotiations and kinetic-option preparation, while distinguishing baseline observations and missing indicators from affirmative evidence.",
+          "evidence_refs": [
+            "Evidence 1",
+            "Evidence 2",
+            "Evidence 3",
+            "Evidence 4"
+          ],
+          "uncertain": false
+        },
+        "S2": {
+          "label": "COHERENT",
+          "rationale": "The stated pathways logically connect failed diplomacy and authorized option preparation to possible execution within the horizon, while presenting a site-readiness change as a conditional trigger rather than an established fact.",
+          "evidence_refs": [
+            "Evidence 2",
+            "Evidence 3",
+            "Evidence 4"
+          ],
+          "uncertain": false
+        },
+        "S3": {
+          "label": "NONE",
+          "rationale": "Potentially unsupported propositions, including the significance of option preparation and the effect of absent site anomalies, are explicitly identified as inferences or assumptions rather than established facts.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4"
+          ],
+          "uncertain": false
+        },
+        "S4": {
+          "label": "COHERENT",
+          "rationale": "The 38% estimate is consistent with the response's interpretation that deployment, failed diplomacy, and prepared kinetic options create meaningful risk, but no execution commitment or imminent-action indicators keep the event less likely than not.",
+          "evidence_refs": [
+            "Evidence 1",
+            "Evidence 2",
+            "Evidence 3",
+            "Evidence 4"
+          ],
+          "uncertain": false
+        }
+      },
+      "raw_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\raw\\P01FS_C01_BL_SOL_R01_judgeA.json",
+      "score_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\scores\\P01FS_C01_BL_SOL_R01_judgeA.json",
+      "judge_trace": {
+        "ok": true,
+        "traceId": "6ffc429f3c83d5dc6a9a547385ff07a7",
+        "generationObservationId": "84a592d790efc323"
+      },
+      "score_emission": {
+        "ok": true,
+        "errors": []
+      }
+    },
+    {
+      "target_run_id": "P01FS_C01_BL_SOL_R01",
+      "judge": "judgeB",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "criteria": {
+        "S1": {
+          "label": "COHERENT",
+          "rationale": "The candidate accurately uses the supplied evidence, keeps the most important claims tied to the packet, and separates inferences from stated facts in a dedicated assumptions section.",
+          "evidence_refs": [
+            "evidence 1",
+            "evidence 2",
+            "evidence 3",
+            "evidence 4"
+          ],
+          "uncertain": false
+        },
+        "S2": {
+          "label": "COHERENT",
+          "rationale": "The proposed pathways logically connect the confirmed deployment, failed negotiations, and authorized option-preparation to a possible kinetic preemption within the forecast window without contradiction.",
+          "evidence_refs": [
+            "evidence 1",
+            "evidence 2",
+            "evidence 3",
+            "evidence 4"
+          ],
+          "uncertain": false
+        },
+        "S3": {
+          "label": "NONE",
+          "rationale": "The response does not present clearly unsupported substantive facts as established; its speculative elements are identified as assumptions or pathway possibilities rather than asserted as known facts.",
+          "evidence_refs": [
+            "evidence 3",
+            "candidate assumptions section"
+          ],
+          "uncertain": false
+        },
+        "S4": {
+          "label": "COHERENT",
+          "rationale": "The 38% estimate is consistent with a moderate-risk reading of the packet: meaningful escalation indicators are present, but there is still no commitment to execute and no sign of imminent action, which supports a sub-50% judgment.",
+          "evidence_refs": [
+            "evidence 2",
+            "evidence 3",
+            "evidence 4"
+          ],
+          "uncertain": false
+        }
+      },
+      "raw_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\raw\\P01FS_C01_BL_SOL_R01_judgeB.json",
+      "score_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\scores\\P01FS_C01_BL_SOL_R01_judgeB.json",
+      "judge_trace": {
+        "ok": true,
+        "traceId": "9d1f50239f730dd15fc0e2bb0688a58c",
+        "generationObservationId": "e7bccf7d539ad965"
+      },
+      "score_emission": {
+        "ok": true,
+        "errors": []
+      }
+    },
+    {
+      "target_run_id": "P01FS_C10_SD_AUTH_KIMI3_R01",
+      "judge": "judgeA",
+      "model": "gpt-5.6-terra",
+      "criteria": {
+        "S1": {
+          "label": "COHERENT",
+          "rationale": "The assessment accurately identifies and prioritizes recent, pathway-specific evidence: maritime restrictions, inspection- and boarding-oriented auxiliary preparations, naval equipment fitting, and dedicated blockade planning staff. It clearly marks broader conclusions as inferences and notes uncertainty.",
+          "evidence_refs": [
+            "Evidence 2",
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S2": {
+          "label": "COHERENT",
+          "rationale": "The proposed sequence from announced restrictions to coordinated boarding and inspection enforcement logically connects the supplied preparations to de facto or declared shipping interdiction within the horizon. It also recognizes that preparations may not culminate in qualifying interdiction.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S3": {
+          "label": "NONE",
+          "rationale": "The candidate does not present unsupported substantive claims as established. Potential future actions such as boarding, diversion, or seizure are framed as pathways, while the conclusion that the activity indicates a blockade plan is explicitly labeled an inference.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S4": {
+          "label": "COHERENT",
+          "rationale": "The 85% probability is consistent with the candidate's interpretation of multiple recent and mutually reinforcing blockade-specific indicators, the near-term start of restrictions, and its stated residual risks of non-execution, delay, deception, or insufficiently comprehensive enforcement.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        }
+      },
+      "raw_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\raw\\P01FS_C10_SD_AUTH_KIMI3_R01_judgeA.json",
+      "score_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\scores\\P01FS_C10_SD_AUTH_KIMI3_R01_judgeA.json",
+      "judge_trace": {
+        "ok": true,
+        "traceId": "5a0992ba9db1fb0469f24f5ccd6cf472",
+        "generationObservationId": "922cdc6db55675d4"
+      },
+      "score_emission": {
+        "ok": true,
+        "errors": []
+      }
+    },
+    {
+      "target_run_id": "P01FS_C10_SD_AUTH_KIMI3_R01",
+      "judge": "judgeB",
+      "model": "gpt-5.4-mini-2026-03-17",
+      "criteria": {
+        "S1": {
+          "label": "COHERENT",
+          "rationale": "The answer cites the most relevant packet items accurately and keeps the source facts largely distinct from its own inferences. No major misstatement of the supplied evidence is apparent.",
+          "evidence_refs": [
+            "Evidence 2",
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S2": {
+          "label": "COHERENT",
+          "rationale": "The stated mechanism links the observed maritime restrictions, boarding-oriented preparations, headquarters activity, and absence of strike/amphibious build-up to a possible shipping interdiction within the horizon without internal contradiction.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S3": {
+          "label": "NONE",
+          "rationale": "Substantive causal conclusions are mostly marked as inferences in the assumptions section rather than asserted as undisputed fact. No clear material unsupported claim is presented as established.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        },
+        "S4": {
+          "label": "COHERENT",
+          "rationale": "The 85% estimate is high but broadly matches the dense, recent, and pathway-specific evidence that directly points toward blockade preparations and scheduled maritime restrictions. The residual uncertainty noted in the answer is consistent with that level of risk.",
+          "evidence_refs": [
+            "Evidence 3",
+            "Evidence 4",
+            "Evidence 5",
+            "Evidence 6"
+          ],
+          "uncertain": false
+        }
+      },
+      "raw_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\raw\\P01FS_C10_SD_AUTH_KIMI3_R01_judgeB.json",
+      "score_path": "C:\\Users\\daian\\national-security-evals\\outputs\\smoke\\P01_FINAL\\P01_FINAL_SMOKE_002\\judges\\scores\\P01FS_C10_SD_AUTH_KIMI3_R01_judgeB.json",
+      "judge_trace": {
+        "ok": true,
+        "traceId": "7f2f40f6e6a5f4c6e1bc78f0c049078e",
+        "generationObservationId": "161fea6f0ad685b9"
+      },
+      "score_emission": {
+        "ok": true,
+        "errors": []
+      }
+    }
+  ],
+  "judge_error": null,
+  "verdict": "GO"
+}
