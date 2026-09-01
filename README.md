@@ -3,7 +3,7 @@
 > **Evidentiary Responsiveness in Escalation-Risk Assessment**  
 > A controlled evaluation of whether frontier models update strategic risk assessments for the right evidentiary reasons — and remain appropriately stable when they should.
 
-**Final execution status:** 10 cases · 3 target models · 408/408 target generations complete · deterministic layer complete · 693/816 semantic judge scores valid · results analysis in progress.
+**Final execution status:** 10 cases · 3 target models · 408/408 target generations complete · deterministic layer complete · 693/816 semantic judge scores valid · final scientific synthesis available.
 
 ---
 
@@ -404,53 +404,184 @@ This acquisition limitation affects the second semantic-judge layer; it does **n
 
 ---
 
-## 5. What Happened?
 
-> **Data acquisition is closed. This section will be finalized after the deterministic, reliability, and semantic analyses are completed.**
+## 5. Results
+### 1. Did P01 recover the construct it was designed to measure?
 
-The Final results section will be organized in three layers:
+Broadly, yes.
 
-### A. Construct Signal
+P01 was designed to test whether frontier models respond selectively to changes in the **diagnostic value and evidentiary structure** of strategic information. The Final completed all **408/408 planned target-model generations**, so the deterministic construct layer is complete.
 
-Did the evidence manipulations produce the theoretically expected structure?
+Across **60 frozen treatment-versus-baseline comparisons**, models moved escalation risk in the pre-specified direction in **47/60 cases (78.3%)**. This provides substantial evidence that the models often recognize when new information should increase or decrease escalation risk.
 
-Expected reporting includes:
+However, the stricter test was much harder. Only **12/27 eligible case-model profiles (44.4%)** satisfied the complete expected ordering between baseline, weak evidence, and strong evidence.
 
-- directionality;
-- SD vs WD ordering;
-- ND invariance;
-- Selectivity Gap;
-- bidirectional response;
-- Core vs Stress differences.
+The central result is therefore not simply that models “respond to evidence.” It is that:
 
-### B. Reliability & Measurement Integrity
+> **Models usually recognize the direction in which diagnostic evidence should move an assessment, but are considerably less reliable at calibrating the relative weight of stronger versus weaker evidence.**
 
-How stable and trustworthy was the instrument?
-
-Expected reporting includes:
-
-- repetition dispersion;
-- technical completion;
-- truncation/output failures;
-- judge agreement/disagreement;
-- disputed cases;
-- reliability sentinel results.
-
-### C. Observed Model Failure Profiles
-
-What behaviors did individual models actually exhibit?
-
-Expected reporting includes:
-
-- F1–F5 failure patterns;
-- evidence-family heterogeneity;
-- rare severe failures;
-- robustness results;
-- Authority Pressure effects.
-
-> Final headline results, figures, and interpretation will be inserted here after the full analysis closes.
+This distinction is exactly what P01 was designed to expose.
 
 ---
+
+### 2. Where did models perform well?
+
+Performance was strongest when the evidence structure was sharply discriminating.
+
+**C03**, which tests source independence, and **C10**, which tests pathway-conditioned evidence, both achieved **6/6 expected-direction successes and 3/3 strict-order successes** across the three models. These cases also produced large Diagnostic Separation and Selectivity Gap values.
+
+This suggests that models can respond effectively when the evidentiary mechanism is explicit and strongly discriminating—for example, when independent corroboration materially changes the evidentiary picture or when new information clearly shifts the plausibility of a specific escalation pathway.
+
+Non-diagnostic invariance was also generally strong. Median absolute **ND drift was only 1 probability point**, and **14/30 profiles showed no movement at all**. Most salient but non-diagnostic additions therefore produced little change in the expressed risk estimate.
+
+---
+
+### 3. Where did models struggle?
+
+The clearest weakness was **evidence-strength calibration**.
+
+Cases **C05 and C06**, which probe source quality/pedigree and temporal relevance, failed strict ordering for all three target models. This indicates a shared difficulty in consistently translating evidence quality or recency into proportionate probabilistic movement.
+
+The dominant supported failure pattern was therefore **F2 — Diagnostic Underreaction / Rigidity**. Under the frozen strict-order rule, **15/27 eligible profiles** failed the complete expected relation. Some failures were minor ties or one-point misses, but the overall pattern is substantive: models often reacted appropriately to strong evidence while failing to position weak evidence correctly.
+
+**F3 — Wrong-Direction Updating** appeared in **8/60 comparisons**. Most involved weak-diagnostic evidence and several were small movements, but some were more substantial.
+
+**F1 — Non-Diagnostic Overreaction** could not be assigned a formal prevalence because no materiality threshold was frozen. Still, two profiles showed **10-point ND drifts**, providing clear descriptive counterexamples to invariance.
+
+**F4 — Unsupported Confidence Inflation** also remains a review category rather than a formal prevalence estimate because no frozen threshold defined when confidence movement should count as a failure.
+
+Clear **F5 — Evidence–Pathway–Assessment Incoherence** appears comparatively uncommon. The semantic evidence shows very high agreement for evidence–assessment coherence, although S4 is not mechanically identical to F5.
+
+---
+
+### 4. What did the perturbations and stress tests reveal?
+
+The perturbations produced meaningful differences rather than uniform model movement.
+
+Source-independence perturbations were among the strongest. Models responded cleanly when the distinction between independent and dependent evidence was made diagnostic.
+
+Contradictory and dependence-heavy evidence structures produced more mixed behavior. In **C04**, models often recognized that reports shared a common source, yet differed substantially in how strongly they discounted the evidence numerically. Kimi also showed both a large ND shift and high repetition dispersion in this case.
+
+Pathway-conditioned evidence worked particularly well. **C10** generated strong directionality, ordering, and Selectivity Gaps across models.
+
+By contrast, source-quality and temporal-relevance perturbations were consistently harder. The fact that C05 and C06 failed strict ordering across all three models suggests that this was not an isolated stochastic error but a recurring weakness within the P01 portfolio.
+
+---
+
+### 5. What happened under Authority Pressure?
+
+Authority Pressure was included only in **C02 and C10** as a targeted robustness perturbation, not as a separate full construct.
+
+In C02, authority pressure increased baseline risk for all three models, especially GPT-4.1, but its effect under strong stand-down evidence was much smaller.
+
+In C10, authority pressure reduced the strong-diagnostic blockade estimate for all three models, while its baseline effects varied across models.
+
+Within these cases, the pattern suggests that **strong diagnostic evidence can constrain or redirect the influence of an authority preference**, while more ambiguous evidence states leave greater room for authority-sensitive movement.
+
+This is a meaningful robustness result, but it does not establish general resistance to authority or general sycophancy behavior.
+
+---
+
+### 6. How robust were the results across repetitions?
+
+Most cells were numerically stable.
+
+Across **132 cells**, median repetition-level sample standard deviation was **1.73 probability points**. The two pre-specified Reliability Sentinel blocks were also stable, indicating that the experiment did not suffer from broad stochastic instability.
+
+However, localized failures were important. **C09/Kimi-SD** ranged from **40% to 70%**, and **C04/Kimi-SD** ranged from **30% to 55%** across repetitions.
+
+In both cases, the qualitative reasoning remained broadly coherent. The instability occurred in how the model translated similar evidence into a numerical probability.
+
+This suggests an important operational lesson:
+
+> **Coherent qualitative reasoning does not guarantee stable probabilistic judgment.**
+
+---
+
+### 7. Did the models differ?
+
+Yes, but not enough to support a simple global ranking.
+
+Expected-direction success was:
+
+- **GPT-5.6 Sol: 17/20 — 85%**
+- **GPT-4.1: 16/20 — 80%**
+- **Kimi K3: 14/20 — 70%**
+
+Sol also had the lowest median repetition dispersion.
+
+However, all three models achieved exactly **4/9 strict-ordering successes**. The central evidence-strength calibration weakness therefore appears across the model portfolio rather than belonging to one provider or architecture.
+
+Kimi produced the two largest highlighted numerical-instability outliers. GPT-4.1 produced one of the clearest wrong-direction weak-evidence responses. Sol performed best overall on directionality and median stability, but still shared the same strict-ordering ceiling.
+
+The most defensible conclusion is that **model differences exist, but mechanism-specific behavior matters more than a single global rank**.
+
+---
+
+### 8. What did the semantic judges add?
+
+The semantic layer contained **693/816 valid judgments (84.93%)**. Judge A completed **408/408** outputs; Judge B completed **285/408**, with **123 preserved token-limit truncations**.
+
+On the 285 jointly scored cells, exact agreement was:
+
+- **S1 Evidence-Use Coherence: 83.9%**
+- **S2 Pathway Coherence: 72.6%**
+- **S3 Unsupported Substantive Inference: 66.3%**
+- **S4 Evidence–Assessment Coherence: 96.5%**
+
+The strongest semantic result is therefore S4: both judges overwhelmingly agreed that the assessment was coherent with the evidence cited.
+
+S3 is much more evaluator-sensitive and should not be used to claim a precise prevalence of unsupported inference.
+
+The Judge-B missingness is non-random, so semantic conclusions rely primarily on complete Judge-A coverage and paired agreement rather than unqualified Judge-B marginals.
+
+---
+
+### 9. What can we say with the highest confidence?
+
+The strongest supported conclusions are:
+
+1. **Frontier models often respond to diagnostic evidence in the correct direction.**
+2. **Correct direction does not imply reliable calibration of evidence strength.**
+3. **Performance is mechanism-specific rather than uniform across evidence types.**
+4. **Non-diagnostic invariance is usually strong, but meaningful counterexamples exist.**
+5. **Most numerical outputs are stable, but localized probability-mapping instability can be large.**
+6. **No model dominates every dimension of the construct.**
+7. **Evidence–assessment coherence is semantically robust; unsupported-inference severity is much more judge-sensitive.**
+8. **P01 successfully separates several trust-relevant failure modes that a single aggregate score would obscure.**
+
+---
+
+### 10. What should we not claim?
+
+P01 does not establish real-world forecast calibration, policy quality, latent beliefs, autonomous strategic competence, or downstream crisis performance.
+
+It does not support a global leaderboard.
+
+It does not establish a general causal effect of Authority Pressure beyond the two matched cases.
+
+It also does not justify precise prevalence estimates for F1, F4, or S3 where thresholds or evaluator agreement are insufficient.
+
+These limits constrain the scope of the conclusions, but they do not erase the diagnostic signal.
+
+---
+
+### 11. What does this say about LLM decision support?
+
+The broader question motivating P01 is not whether frontier models are simply “good at geopolitics.” It is where they may be useful inside the **Outer Loop of strategic judgment**, and where their reliability begins to break down.
+
+Within the P01 portfolio, the models appear most useful as tools for **structured evidence interpretation**: identifying whether strongly diagnostic information should raise or lower escalation risk, recognizing certain source-dependence structures, and maintaining relative stability when irrelevant information is introduced.
+
+They appear less reliable when decision-makers need **fine-grained weighting of evidentiary strength**, consistent probabilistic translation across repeated runs, or confident discrimination between weaker forms of evidence such as source pedigree and temporal relevance.
+
+The practical implication is therefore not “use” or “do not use” LLMs for strategic assessment.
+
+It is narrower and more useful:
+
+> **LLMs may be valuable for supporting the direction and structure of evidentiary assessment, but high-stakes decision-makers should not assume that coherent reasoning implies reliable weighting, stable probabilities, or consistently calibrated confidence.**
+
+That distinction defines the principal trust boundary revealed by P01.
+
 
 ## 6. Repository Map
 

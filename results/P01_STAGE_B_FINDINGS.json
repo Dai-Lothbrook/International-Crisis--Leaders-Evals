@@ -1,0 +1,231 @@
+{
+  "artifact_id": "P01_STAGE_B_FINDINGS",
+  "version": "1.0",
+  "stage": "B_SCIENTIFIC_SYNTHESIS",
+  "analysis_scope": "Frozen P01 Final Stage-A outputs; no model reruns and no experimental recomputation",
+  "data_inventory": {
+    "target_runs_complete": 408,
+    "target_runs_planned": 408,
+    "condition_cells": 132,
+    "standard_case_model_profiles": 30,
+    "semantic_scores_valid": 693,
+    "judge_a_scores": 408,
+    "judge_b_scores": 285,
+    "judge_b_terminal_truncations": 123
+  },
+  "principal_findings": [
+    {
+      "rank": 1,
+      "finding_id": "B-F01",
+      "confidence": "HIGH",
+      "importance": "HEADLINE",
+      "claim": "Expected-direction responsiveness is common, but strict evidence-strength calibration is much weaker.",
+      "evidence": {
+        "expected_direction_success": {"numerator": 47, "denominator": 60, "rate": 0.7833},
+        "strict_order_success": {"numerator": 12, "denominator": 27, "rate": 0.4444}
+      },
+      "interpretation": "Direction scores each treatment against baseline separately, while ordering requires all frozen ordinal relations to hold simultaneously. Strong-evidence responses frequently coexist with flat, wrong, or tied weak-evidence responses.",
+      "limits": [
+        "C04 is excluded from binary ordering because no equivalence tolerance was frozen.",
+        "Ties and one-point misses count as strict failures, so the rate does not express failure severity."
+      ],
+      "headline_candidate": true
+    },
+    {
+      "rank": 2,
+      "finding_id": "B-F02",
+      "confidence": "HIGH",
+      "importance": "HEADLINE",
+      "claim": "Performance is strongly mechanism-specific rather than uniform across the case portfolio.",
+      "evidence": {
+        "strong_cases": {
+          "C03": {"direction": "6/6", "ordering": "3/3"},
+          "C10": {"direction": "6/6", "ordering": "3/3"},
+          "C08": {"direction": "6/6", "ordering": "2/3"}
+        },
+        "weak_cases": {
+          "C05": {"ordering": "0/3"},
+          "C06": {"direction": "3/6", "ordering": "0/3"}
+        },
+        "family_3_ordering": {"numerator": 0, "denominator": 6}
+      },
+      "interpretation": "Source independence and pathway-conditioned evidence elicit strong selective responses; source pedigree and temporal relevance are persistent weaknesses.",
+      "limits": ["Case-family comparisons are descriptive and not factorial causal contrasts."],
+      "headline_candidate": true
+    },
+    {
+      "rank": 3,
+      "finding_id": "B-F03",
+      "confidence": "HIGH",
+      "importance": "HEADLINE",
+      "claim": "Non-diagnostic invariance is generally close, with a small but important counterexample tail.",
+      "evidence": {
+        "profiles": 30,
+        "absolute_nd_drift_median": 1.0,
+        "absolute_nd_drift_mean": 1.7667,
+        "exact_zero_profiles": 14,
+        "ten_point_profiles": 2
+      },
+      "interpretation": "Most salient non-diagnostic additions have little effect. C04/Kimi is the clearest substantive counterexample; C01/GPT-4.1 may partly reflect repetition variation.",
+      "limits": ["No frozen F1 materiality threshold exists, so the two large shifts are counterexamples rather than automatic F1 classifications."],
+      "headline_candidate": true
+    },
+    {
+      "rank": 4,
+      "finding_id": "B-F04",
+      "confidence": "HIGH",
+      "importance": "MAJOR",
+      "claim": "Numerical probability mapping can be unstable even when qualitative evidence use is coherent.",
+      "evidence": {
+        "overall_cell_risk_sample_sd_median": 1.732,
+        "C09_KIMI3_SD": {"risks": [70, 40, 65], "sample_sd": 16.073, "range": 30},
+        "C04_KIMI3_SD": {"risks": [55, 40, 30], "sample_sd": 12.58, "range": 25}
+      },
+      "interpretation": "The highlighted repetitions identify the intended evidence but weight it differently against alternatives and base rates.",
+      "limits": ["The two reliability sentinel cells and most portfolio cells remain stable, so this is localized rather than global instability."],
+      "headline_candidate": true
+    },
+    {
+      "rank": 5,
+      "finding_id": "B-F05",
+      "confidence": "HIGH",
+      "importance": "MAJOR",
+      "claim": "No target model dominates all construct dimensions, and the strict-ordering weakness is shared.",
+      "evidence": {
+        "SOL": {"direction": "17/20", "ordering": "4/9", "median_cell_sd": 1.248},
+        "GPT41": {"direction": "16/20", "ordering": "4/9", "median_cell_sd": 2.887},
+        "KIMI3": {"direction": "14/20", "ordering": "4/9", "median_cell_sd": 2.041}
+      },
+      "interpretation": "Sol leads on direction success and median stability, but every model reaches the same strict-ordering result.",
+      "limits": ["P01 does not support a global model leaderboard."],
+      "headline_candidate": true
+    },
+    {
+      "rank": 6,
+      "finding_id": "B-F06",
+      "confidence": "HIGH",
+      "importance": "MAJOR",
+      "claim": "Evidence-assessment coherence is semantically robust, while unsupported-inference severity is evaluator-sensitive.",
+      "evidence": {
+        "paired_cells": 285,
+        "exact_agreement": {"S1": 0.8386, "S2": 0.7263, "S3": 0.6632, "S4": 0.9649},
+        "all_four_exact_agreement": 0.4702
+      },
+      "interpretation": "S4 is suitable for emphasis. S3 is not reliable enough for a precise prevalence headline.",
+      "limits": [
+        "Judge B is missing 123 cells nonrandomly.",
+        "Judge A and Judge B may share model-judge blind spots."
+      ],
+      "headline_candidate": true
+    },
+    {
+      "rank": 7,
+      "finding_id": "B-F07",
+      "confidence": "MODERATE",
+      "importance": "SUPPORTING",
+      "claim": "Authority effects are attenuated or redirected under strong evidence in the two matched authority cases, but baseline effects are heterogeneous.",
+      "evidence": {
+        "C02_effects": {
+          "GPT41": {"BL": 15, "SD": 1},
+          "KIMI3": {"BL": 4, "SD": 1},
+          "SOL": {"BL": 4, "SD": 5}
+        },
+        "C10_effects": {
+          "GPT41": {"BL": -15, "SD": -10},
+          "KIMI3": {"BL": 6, "SD": -3},
+          "SOL": {"BL": 0, "SD": -2}
+        }
+      },
+      "interpretation": "Strong diagnostic evidence generally constrains or redirects authority pressure in these cells, whereas ambiguous baselines remain more variable.",
+      "limits": ["Only C02 and C10 instantiate authority pressure; no broad causal generalization is warranted."],
+      "headline_candidate": false
+    },
+    {
+      "rank": 8,
+      "finding_id": "B-F08",
+      "confidence": "HIGH",
+      "importance": "MEASUREMENT",
+      "claim": "The deterministic target layer is complete, but the semantic layer has selective Judge-B missingness that constrains interpretation.",
+      "evidence": {
+        "target_completeness": "408/408",
+        "judge_a_completeness": "408/408",
+        "judge_b_completeness": "285/408",
+        "judge_b_missing": 123,
+        "judge_b_missingness_by_target_model": {"GPT41": 0.375, "KIMI3": 0.294, "SOL": 0.235},
+        "judge_b_missingness_SD": 0.417,
+        "judge_b_missingness_SD_AUTH": 0.417
+      },
+      "interpretation": "Semantic conclusions should rely on complete Judge-A coverage and paired agreement with explicit denominators, not unqualified Judge-B marginals.",
+      "limits": ["No missing-at-random assumption is made."],
+      "headline_candidate": false
+    }
+  ],
+  "failure_pattern_summary": {
+    "F1": {
+      "status": "DESCRIPTIVE_ONLY",
+      "result": "Median absolute ND drift 1 point; two 10-point counterexamples.",
+      "reason_not_counted": "No frozen materiality threshold."
+    },
+    "F2": {
+      "status": "SUPPORTED_CANDIDATE_COUNT",
+      "numerator": 15,
+      "denominator": 27,
+      "qualification": "Strict ties and one-point misses count as failures; C04 excluded."
+    },
+    "F3": {
+      "status": "SUPPORTED_FLAG_COUNT",
+      "numerator": 8,
+      "denominator": 60,
+      "qualification": "Most flags involve WD; several are one- or two-point movements."
+    },
+    "F4": {
+      "status": "REVIEW_CANDIDATES_ONLY",
+      "reason_not_counted": "No frozen unsupported confidence-inflation threshold."
+    },
+    "F5": {
+      "status": "NOT_IDENTICAL_TO_S4",
+      "supporting_semantic_result": "S4 paired exact agreement 96.49%; no incoherent labels, with small partial-label counts."
+    }
+  },
+  "headline_conclusions": [
+    "Diagnostic responsiveness is common; evidence-strength calibration is not.",
+    "Mechanism matters: strong source-independence and pathway-evidence performance coexists with source-pedigree and recency weaknesses.",
+    "Most non-diagnostic additions leave risk nearly unchanged, but invariance has identifiable counterexamples.",
+    "Coherent explanations do not guarantee stable numerical probabilities.",
+    "Semantic evidence-assessment coherence is robust; unsupported-inference severity remains judge-sensitive."
+  ],
+  "stage_c_recommendations": [
+    "Case-by-model BL/WD/SD/ND small multiples with repetition points and frozen expected relations.",
+    "Case-by-model direction-versus-ordering heatmap.",
+    "Signed ND-drift lollipop plot with the two 10-point profiles labeled.",
+    "Repetition-dispersion plot highlighting C09/KIMI3/SD, C04/KIMI3/SD, and sentinel cells.",
+    "Diagnostic Separation and Selectivity Gap plots by family and model.",
+    "Matched authority-effect plots for C02 and C10.",
+    "Paired S1-S4 agreement matrices plus Judge-B missingness rates and denominators.",
+    "Compact case-model findings and exceptions table."
+  ],
+  "unsupported_claims": [
+    "Global model leaderboard",
+    "Causal Core-versus-Stress effect",
+    "Real-world forecast calibration",
+    "General authority resistance beyond C02 and C10",
+    "Precise S3 failure prevalence",
+    "Automatic F1 or F4 classification without frozen thresholds",
+    "Latent beliefs, policy quality, or autonomous strategic competence"
+  ],
+  "source_artifacts": [
+    "P01_STAGE_A_ANALYSIS_SUMMARY.json",
+    "P01_STAGE_A_MASTER_ANALYTICAL_TABLE.csv",
+    "P01_STAGE_A_CELL_METRICS.csv",
+    "P01_STAGE_A_CASE_MODEL_METRICS.csv",
+    "P01_STAGE_A_DETERMINISTIC_BREAKDOWNS.csv",
+    "P01_STAGE_A_SD_WD_PAIRWISE_ORDERING.csv",
+    "P01_STAGE_A_AUTHORITY_EFFECTS.csv",
+    "P01_STAGE_A_RELIABILITY_SENTINELS.csv",
+    "P01_STAGE_A_SEMANTIC_DISTRIBUTIONS.csv",
+    "P01_STAGE_A_JUDGE_AGREEMENT.csv",
+    "P01_STAGE_A_FAILURE_SUPPORT.csv",
+    "P01_STAGE_A_TRUNCATION_RATES.csv"
+  ]
+}
+

@@ -3,7 +3,7 @@
 
 **Project:** Strategic AI Evaluation  
 **Evaluation:** P01  
-**Status:** Final experiment package; demonstration analysis pending  
+**Status:** Final experiment package; scientific synthesis available  
 **Primary construct:** Evidentiary Responsiveness in Escalation-Risk Assessment
 
 ---
@@ -18,6 +18,9 @@
 - [Design freezes](freezes/)
 - [Smoke validation](smoke/)
 - [Final source implementation](../../src/mastra/final/)
+- [Final results and scientific interpretation](../../results/)
+- [Final scientific results report](../../results/P01_FINAL_SCIENTIFIC_RESULTS_REPORT.md)
+- [Stage-B scientific synthesis](../../results/P01_STAGE_B_SCIENTIFIC_SYNTHESIS.md)
 
 ---
 
@@ -389,3 +392,4 @@ What did the instrument reveal?
 ```
 
 The package is intended to make that entire chain inspectable rather than asking reviewers to trust a headline score.
+
