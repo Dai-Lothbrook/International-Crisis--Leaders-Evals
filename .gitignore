@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+node_modules/
+dist/
+outputs/
+.pnpm-store/
+.tmp-npm-cache/
+*.log
+.DS_Store
+Thumbs.db
+
